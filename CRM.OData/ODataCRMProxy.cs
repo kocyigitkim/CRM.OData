@@ -492,19 +492,9 @@ namespace CRM.OData
         }
         public bool SetState(EntityReference entityReference, int statecode, int statuscode, bool isDisabledConvertion = false)
         {
-            try
-            {
-                string mainEntity = entityReference.LogicalName;
-                mainEntity = GetCollectionName(mainEntity, isDisabledConvertion);
-
-                var result = ExecuteRequest<JToken>("/" + mainEntity + $"({entityReference.Id.ToString().Replace("{", "").Replace("}", "").ToLower()})");
-                return true;
-            }
-            catch (Exception exception)
-            {
-                Error?.Invoke(exception);
-                return false;
-            }
+            var t = this.SetStateAsync(entityReference, statecode, statuscode, isDisabledConvertion);
+            t.Wait();
+            return t.Result;
         }
         public async Task<bool> SetStateAsync(EntityReference entityReference, int statecode, int statuscode, bool isDisabledConvertion = false)
         {
@@ -513,7 +503,19 @@ namespace CRM.OData
                 string mainEntity = entityReference.LogicalName;
                 mainEntity = GetCollectionName(mainEntity, isDisabledConvertion);
 
-                var result = await ExecuteRequestAsync<JToken>("/" + mainEntity + $"({entityReference.Id.ToString().Replace("{", "").Replace("}", "").ToLower()})");
+                var result = await ExecuteRequestAsync<JToken>("/" + mainEntity + $"({entityReference.Id.ToString().Replace("{", "").Replace("}", "").ToLower()})", (req)=>
+                {
+                    req.Method = Method.PATCH;
+                    var jObj = new JObject();
+                    var entity = new Entity(entityReference.LogicalName);
+                    entity.SetAttribute("statecode", statecode);
+                    entity.SetAttribute("statuscode", statuscode);
+                    foreach (var attr in entity.Attributes)
+                    {
+                        UnBoxEntityToJson(jObj, attr, entity.LogicalName, isDisabledConvertion);
+                    }
+                    req.AddParameter("application/json", JsonConvert.SerializeObject(jObj), ParameterType.RequestBody);
+                });
                 return true;
             }
             catch (Exception exception)
