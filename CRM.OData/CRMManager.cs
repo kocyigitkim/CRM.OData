@@ -1,7 +1,7 @@
-﻿using CRM.OData.DataTypes;
-using CRM.OData.Layout;
-using CRM.OData;
-using CRM.OData;
+﻿using Dynamics365.OData.DataTypes;
+using Dynamics365.OData.Layout;
+using Dynamics365.OData;
+using Dynamics365.OData;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRM.OData
+namespace Dynamics365.OData
 {
     public class CRMManager : IDisposable
     {

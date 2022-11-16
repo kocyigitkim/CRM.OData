@@ -1,8 +1,8 @@
-﻿using CRM.OData.DataTypes;
+﻿using Dynamics365.OData.DataTypes;
 using Newtonsoft.Json.Linq;
 using System;
 
-namespace CRM.OData
+namespace Dynamics365.OData
 {
     internal class TypeConverter
     {

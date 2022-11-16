@@ -1,6 +1,6 @@
-﻿using CRM.OData;
-using CRM.OData.Layout;
-using CRM.OData.Metadata;
+﻿using Dynamics365.OData;
+using Dynamics365.OData.Layout;
+using Dynamics365.OData.Metadata;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
@@ -14,7 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace CRM.OData
+namespace Dynamics365.OData
 {
     public class ODataCRMProxy : IDisposable
     {

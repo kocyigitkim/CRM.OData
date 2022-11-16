@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace CRM.OData.Layout
+namespace Dynamics365.OData.Layout
 {
     public class CRMEntityInformation
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRM.OData.DataTypes
+namespace Dynamics365.OData.DataTypes
 {
     public enum CRMLanguage
     {

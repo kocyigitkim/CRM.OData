@@ -1,9 +1,9 @@
-﻿using CRM.OData;
+﻿using Dynamics365.OData;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CRM.OData.DataTypes
+namespace Dynamics365.OData.DataTypes
 {
     public struct CRMReference
     {

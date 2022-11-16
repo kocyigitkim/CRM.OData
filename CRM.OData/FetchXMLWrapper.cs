@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Runtime.Serialization;
 
-namespace CRM.OData
+namespace Dynamics365.OData
 {
     [System.Serializable()]
     public class FetchWrapper

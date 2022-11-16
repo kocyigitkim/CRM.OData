@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CRM.OData.Layout
+namespace Dynamics365.OData.Layout
 {
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
     public class CRMFieldAttribute : Attribute

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CRM.OData
+namespace Dynamics365.OData
 {
     public static class StringExtensions
     {

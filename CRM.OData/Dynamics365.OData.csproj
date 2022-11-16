@@ -2,12 +2,14 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net5.0;net6.0;netcoreapp3.1;netcoreapp3.0;netstandard2.1;netstandard2.0;net452;net46;net461;net462;net47;net471;net472;net48</TargetFrameworks>
+    <TargetFrameworks>net6.0;netcoreapp3.1;netcoreapp3.0;netstandard2.1;netstandard2.0</TargetFrameworks>
     <NeutralLanguage>en</NeutralLanguage>
     <RepositoryType>git</RepositoryType>
     <Version>1.0.0.0</Version>
     <AssemblyName>CRM.OData</AssemblyName>
-    <RootNamespace>CRM.OData</RootNamespace>
+    <RootNamespace>Dynamics365.OData</RootNamespace>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -16,6 +18,11 @@
     <WarningLevel>2</WarningLevel>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>Dynamics365.OData</AssemblyName>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DumpExtensions" Version="2.0.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />

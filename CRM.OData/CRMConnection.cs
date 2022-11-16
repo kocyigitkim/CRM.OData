@@ -1,9 +1,9 @@
-﻿using CRM.OData;
+﻿using Dynamics365.OData;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRM.OData
+namespace Dynamics365.OData
 {
     public class CRMConnection : IDisposable
     {

@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace CRM.OData.Layout
+namespace Dynamics365.OData.Layout
 {
     internal class CRMEntityLink
     {

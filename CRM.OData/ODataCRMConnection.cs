@@ -1,4 +1,4 @@
-﻿namespace CRM.OData
+﻿namespace Dynamics365.OData
 {
     public class ODataCRMConnection
     {

@@ -1,11 +1,11 @@
-﻿using CRM.OData;
+﻿using Dynamics365.OData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRM.OData
+namespace Dynamics365.OData
 {
     public static class FetchXMLExtensions
     {

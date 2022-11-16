@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRM.OData
+namespace Dynamics365.OData
 {
     static class Localization
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRM.OData.Layout
+namespace Dynamics365.OData.Layout
 {
     public class CRMStateCodeAttribute : Attribute
     {
